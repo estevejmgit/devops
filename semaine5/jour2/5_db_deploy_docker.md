@@ -14,3 +14,20 @@ _La capsule - Batch Juin-Août 2024_
 # 5 - DATABASE DEPLOY WITH DOCKER
 
 ## 1 - Déployer une DB
+
+
+services:
+  database:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: acknowledge_me
+      POSTGRES_DB: your_database
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:
