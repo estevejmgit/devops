@@ -30,7 +30,7 @@ décrire le pod "httpd-server".
 ```
 kubectl get pod -o wide #(detail sur tt les pods)
 kubectl describe pods #(affiche tt les pods)
-kubectl describe pods/<POD NAME>
+kubectl describe pods <POD NAME>
 ```
 
 👉 Grâce à la commande précédente, vous êtes censé pouvoir récupérer l’adresse IP locale du pod. Tentez de faire une requête HTTP via curl à partir de cette adresse.
